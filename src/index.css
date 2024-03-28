@@ -1,0 +1,13 @@
+.sun {
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #020202;
+  background-image: -webkit-radial-gradient(circle farthest-corner at 0% 50%, transparent 54%, #653d18), -webkit-linear-gradient(270deg, rgba(255, 214, 0, .88), rgba(255, 214, 0, .88)), url(https://daks2k3a4ib2z.cloudfront.net/58a71dc…/58a73e4…_cp_sun.png) !important;
+  background-image: radial-gradient(circle farthest-corner at 0% 50%, transparent 54%, #fd232300), linear-gradient(180deg, rgb(255 214 0 / 88%), rgba(255, 213, 0, 0.88)), url(https://daks2k3a4ib2z.cloudfront.net/58a71dc…/58a73e4…_cp_sun.png) !important;
+  background-position: 0px 0px, 0px 0px, 50% 50%;
+  background-size: auto, auto, 110%;
+  background-repeat: repeat, repeat, no-repeat;
+  box-shadow: 0 0 20px 2px #000000;
+  }
