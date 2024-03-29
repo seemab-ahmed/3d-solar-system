@@ -1,16 +1,17 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 function App() {
   return (
     <div className="space">
       <div className="info-menu">
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-all"
           className="all info-btn w-inline-block"
         >
           sun
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-sun"
           className="info-btn w-inline-block"
         >
@@ -18,7 +19,7 @@ function App() {
           <div className="btn-text">Sun</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-mercury"
           className="info-btn w-inline-block"
         >
@@ -26,7 +27,7 @@ function App() {
           <div className="btn-text">Mercury</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-venus"
           className="info-btn w-inline-block"
         >
@@ -34,7 +35,7 @@ function App() {
           <div className="btn-text">Venus</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-earth"
           className="info-btn w-inline-block"
         >
@@ -42,7 +43,7 @@ function App() {
           <div className="btn-text">Earth</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-mars"
           className="info-btn w-inline-block"
         >
@@ -50,7 +51,7 @@ function App() {
           <div className="btn-text">Mars</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-jupiter"
           className="info-btn w-inline-block"
         >
@@ -58,7 +59,7 @@ function App() {
           <div className="btn-text">Jupiter</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-saturn"
           className="info-btn w-inline-block"
         >
@@ -66,7 +67,7 @@ function App() {
           <div className="btn-text">Saturn</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-uranus"
           className="info-btn w-inline-block"
         >
@@ -74,7 +75,7 @@ function App() {
           <div className="btn-text">Uranus</div>
         </a>
         <a
-          href="/"
+          href="#"
           data-ix="show-hide-info-neptune"
           className="info-btn w-inline-block"
         >
