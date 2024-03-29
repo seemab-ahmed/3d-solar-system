@@ -83,22 +83,22 @@ function App() {
         </a>
       </div>
       <div className="galaxy">
-        {/* <div data-ix="orbit-rotation-neptune" className="nep orbit">
+        <div data-ix="orbit-rotation-neptune" className="nep orbit">
           <div className="neptune planet">
             <div className="i-nep title-box">
               <h3 className="title">Neptune</h3>
               <div className="line"></div>
             </div>
           </div>
-        </div> */}
-        {/* <div data-ix="orbit-rotation-saturn" className="orbit ur">
+        </div>
+        <div data-ix="orbit-rotation-saturn" className="orbit ur">
           <div className="planet uranus">
             <div className="i-uran title-box">
               <h3 className="title">Uranus</h3>
               <div className="line"></div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div data-ix="orbit-rotation-saturn" className="orbit sat">
           <div className="planet saturn">
             <div className="saturn-rings"></div>
@@ -116,14 +116,14 @@ function App() {
             </div>
           </div>
         </div>
-        {/* <div data-ix="orbit-rotation-mars" className="ma orbit">
+        <div data-ix="orbit-rotation-mars" className="ma orbit">
           <div className="mars planet">
             <div className="i-mars title-box">
               <h3 className="title">Mars</h3>
               <div className="line"></div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div data-ix="orbit-rotation-earth" className="ear orbit">
           <div
             data-ix="orbit-rotation-moon"
@@ -138,22 +138,22 @@ function App() {
             </div>
           </div>
         </div>
-        {/* <div data-ix="orbit-rotation-venus" className="orbit ven">
+        <div data-ix="orbit-rotation-venus" className="orbit ven">
           <div className="planet venus">
             <div className="i-ven title-box">
               <h3 className="title">Venus</h3>
               <div className="line"></div>
             </div>
           </div>
-        </div> */}
-        {/* <div data-ix="orbit-rotation-mercury" className="merc orbit">
+        </div>
+        <div data-ix="orbit-rotation-mercury" className="merc orbit">
           <div className="mercury planet">
             <div className="i-merc title-box">
               <h3 className="title">Mercury</h3>
               <div className="line"></div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="center sun">
           <div className="i-sun title-box">
             <h3 className="title">Sun</h3>
