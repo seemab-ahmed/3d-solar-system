@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 function App() {
   return (
@@ -7,9 +8,7 @@ function App() {
           href="#"
           data-ix="show-hide-info-all"
           className="all info-btn w-inline-block"
-        >
-          sun
-        </a>
+        ></a>
         <a
           href="#"
           data-ix="show-hide-info-sun"
