@@ -2,3 +2,62 @@
 .w-webflow-badge{
  display: none !important;
 }
+
+body{
+    background-image: url("./images/bg.jpg") !important;
+}
+.space{
+    background-image: url("./images/bg.jpg") !important;
+}
+
+
+
+
+.sun{
+align-items: center;
+justify-content: center;
+position: absolute;
+display: flex;
+height: 100px;
+background-size: 100%;
+width: 100px;
+border-radius: 50%;
+background: url('https://cdn.pixabay.com/photo/2012/01/09/09/10/sun-11582_960_720.jpg');
+background-position: center center;
+box-shadow: 1px 1px 100px 10px #f18d2a , inset -2px -2px 20px 5px rgb(12, 10, 10);
+animation : pole-rotate 30s linear infinite;
+}
+
+@keyframes pole-rotate {
+ 0% {
+     background-position: center center;
+ }
+ 50% {
+     background-position: 50% 40%;
+ }
+ to {
+     transform: rotate(360deg);
+     background-position: center center;
+ }
+}
+
+.jupiter {
+    background-image: url("./images//jupiter.png") !important;
+    box-shadow: none;
+}
+/* .uranus {
+    background-image: url("./images/urnaus.png") !important;
+    box-shadow: none;
+} */
+
+.neptune{
+    background-image: url("./images/neptune.png") !important;
+    width: 86px;
+    height: 75px;
+}
+
+.mars{
+    width: 86px;
+    height: 86px;
+    background-image: url("./images/staurn.png") !important;
+}
