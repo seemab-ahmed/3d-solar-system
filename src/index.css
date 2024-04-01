@@ -5,6 +5,7 @@
 
 body{
     background-image: url("./images/bg.jpg") !important;
+    overflow-x: hidden;
 }
 .space{
     background-image: url("./images/bg.jpg") !important;
@@ -60,4 +61,10 @@ animation : pole-rotate 30s linear infinite;
     width: 86px;
     height: 86px;
     background-image: url("./images/staurn.png") !important;
+}
+
+.venus{
+    width: 56px;
+    height: 56px;
+    background-image: url("./images/venus.png") !important;
 }
