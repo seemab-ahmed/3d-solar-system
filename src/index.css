@@ -43,8 +43,10 @@ animation : pole-rotate 30s linear infinite;
 }
 
 .jupiter {
-    background-image: url("./images//jupiter.png") !important;
+    background-image: url("./images/newplanet.png") !important;
     box-shadow: none;
+    width: 86px;
+    height: 86px;
 }
 /* .uranus {
     background-image: url("./images/urnaus.png") !important;
@@ -58,13 +60,21 @@ animation : pole-rotate 30s linear infinite;
 }
 
 .mars{
-    width: 86px;
-    height: 86px;
+    width: 116px;
+    height: 116px;
     background-image: url("./images/staurn.png") !important;
 }
 
 .venus{
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     background-image: url("./images/venus.png") !important;
+}
+.earth{
+    width: 106px;
+    height: 106px;
+    background-image: url("./images/earth.png") !important;
+}
+.saturn{
+ background-image: linear-gradient(180deg, hsla(60, 38%, 91%, .2), hsla(60, 38%, 91%, .1)), url("./images/new\ planet\ 2.png");
 }
