@@ -1,9 +1,53 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState, useEffect } from "react";
 
 function App() {
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  const handleWheel = (event) => {
+    event.preventDefault();
+
+    // Calculate the new zoom level
+    const newZoomLevel = Math.min(
+      10,
+      Math.max(0.1, zoomLevel + event.deltaY * -0.005)
+    );
+
+    // Get the cursor position
+    const cursorX = event.clientX;
+    const cursorY = event.clientY;
+
+    // Get the position of the cursor relative to the document
+    const rect = document.documentElement.getBoundingClientRect();
+    const relativeX = cursorX - rect.left;
+    const relativeY = cursorY - rect.top;
+
+    // Calculate the scaling factor
+    const scaleFactor = newZoomLevel / zoomLevel;
+
+    // Calculate the new scroll position to keep the cursor fixed
+    const newScrollX = window.pageXOffset + relativeX * (scaleFactor - 1);
+    const newScrollY = window.pageYOffset + relativeY * (scaleFactor - 1);
+
+    // Update the scroll position
+    window.scrollTo(newScrollX, newScrollY);
+
+    // Update the zoom level only if it's greater than 1
+    if (newZoomLevel > 1) {
+      setZoomLevel(newZoomLevel);
+    }
+  };
   return (
-    <div className="space">
+    <div
+      className="space"
+      onWheel={handleWheel}
+      style={{
+        transform: `scale(${zoomLevel})`,
+        transition: "transform 0.1s ease-in-out",
+        overflow: "hidden", // Smooth transition
+      }}
+    >
       <div className="info-menu">
         <a
           href="#"

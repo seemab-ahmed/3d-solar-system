@@ -4,14 +4,16 @@
 }
 
 body{
-    background-image: url("./images/bg.jpg") !important;
-    overflow-x: hidden;
+    background-image: url("./images/gifbgimage.gif") !important;
+    overflow: hidden !important;
 }
 .space{
-    background-image: url("./images/bg.jpg") !important;
+    background-image: url("./images/gifbgimage.gif") !important;
 }
 
-
+.galaxy{
+    top:45% !important;
+} 
 
 
 .sun{
@@ -78,3 +80,5 @@ animation : pole-rotate 30s linear infinite;
 .saturn{
  background-image: linear-gradient(180deg, hsla(60, 38%, 91%, .2), hsla(60, 38%, 91%, .1)), url("./images/new\ planet\ 2.png");
 }
+
+
