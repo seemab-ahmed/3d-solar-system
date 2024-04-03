@@ -43951,7 +43951,7 @@ button.swiper-pagination-bullet {
 }
 
 .ProfilePage .mainContent .messageBoxSection .sectionContainer .leftSectionContainer .searchBox .icon-search {
-   =background-repeat: no-repeat;
+   background-repeat: no-repeat;
     background-size: contain;
     height: 1.2vw;
     width: 1.2vw;
