@@ -4,11 +4,11 @@
 }
 
 body{
-    background-image: url("./images/gifbgimage.gif") !important;
+    background-image: url("./images/bg.jpg") !important;
     overflow: hidden !important;
 }
 .space{
-    background-image: url("./images/gifbgimage.gif") !important;
+    background-image: url("./images/bg.jpg") !important;
 }
 
 .galaxy{
