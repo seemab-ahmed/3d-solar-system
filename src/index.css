@@ -35917,6 +35917,10 @@ textarea:focus {
     letter-spacing: 0.05em;
     line-height: 150.19%;
     margin-bottom: 4px;
+    position:relative !important;
+    border-bottom:0 !important;
+    top:0 !important;
+    left: 0 !important;
 }
 
 .gamePlaySection .gamePlayInner2 .innerText .description2 {

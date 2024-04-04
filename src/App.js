@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import TrailerSection from "./components/trailerSection/trailerSection";
 import PlanetSection from "./components/planetSection/planetSection";
+import SeenOnSection from "./components/SeenOnSection/SeenOnSection";
+import GamePlaySection from "./components/GamePlaySection/GamePlaySection";
+import MarketPlaceSection from "./components/MarketPlaceSection/MarketPlaceSection";
 function App() {
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -212,6 +215,9 @@ function App() {
               </div>
               <PlanetSection />
               <TrailerSection />
+              <SeenOnSection />
+              <GamePlaySection />
+              <MarketPlaceSection />
             </div>
           </div>
         </div>
