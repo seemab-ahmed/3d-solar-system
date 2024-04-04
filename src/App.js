@@ -8,6 +8,9 @@ import PlanetSection from "./components/planetSection/planetSection";
 import SeenOnSection from "./components/SeenOnSection/SeenOnSection";
 import GamePlaySection from "./components/GamePlaySection/GamePlaySection";
 import MarketPlaceSection from "./components/MarketPlaceSection/MarketPlaceSection";
+import MythologySection from "./components/MythologySection/MythologySection";
+import TokonomicSection from "./components/TokonomicSection/TokonomicSection";
+import JoinSection from "./components/JoinSection/JoinSection";
 function App() {
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -218,6 +221,9 @@ function App() {
               <SeenOnSection />
               <GamePlaySection />
               <MarketPlaceSection />
+              <MythologySection />
+              <TokonomicSection />
+              <JoinSection />
             </div>
           </div>
         </div>
