@@ -50,19 +50,6 @@ export default function TokonomicSection() {
               data-gatsby-image-wrapper=""
               className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
             >
-              <div style={{ maxWidth: "726px", display: "block" }}>
-                <img
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  src="data:image/svg+xml;charset=utf-8,%3Csvg height='725' width='726' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                  style={{
-                    maxWidth: "100%",
-                    display: "block",
-                    position: "static",
-                  }}
-                />
-              </div>
               <div
                 aria-hidden="true"
                 data-placeholder-image=""

@@ -35471,7 +35471,7 @@ textarea:focus {
 }
 
 .tokenomicsSection {
-    margin-top: 10vw;
+    margin-top: 6vw;
     position: relative;
 }
 
@@ -35540,7 +35540,7 @@ textarea:focus {
     max-width: 34vw;
     position: absolute;
     right: 5.521vw;
-    top: -5.99vw;
+    top: 0;
 }
 
 .tokenomicsSection .tokenomics_img {
