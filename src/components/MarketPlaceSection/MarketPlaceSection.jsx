@@ -46,12 +46,13 @@ export default function MarketPlaceSection() {
               <img
                 data-gatsby-image-ssr=""
                 data-main-image=""
-                style={{ opacity: 1 , height: "100%" }}
+                style={{ opacity: 1 , height: "100% !important" }}
                 sizes="(min-width: 1115px) 1115px, 100vw"
                 decoding="async"
                 loading="lazy"
                 src={bgImageMp}
                 alt=""
+                className="marketplaceImage"
               />
             </div>
             <div className="gradientBg"></div>

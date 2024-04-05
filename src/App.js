@@ -4,9 +4,10 @@ import TrailerSection from "./components/trailerSection/trailerSection";
 import PlanetSection from "./components/planetSection/planetSection";
 import SeenOnSection from "./components/SeenOnSection/SeenOnSection";
 import GamePlaySection from "./components/GamePlaySection/GamePlaySection";
+import RoadMapSection from "./components/RoadMapSection/RoadMapSection";
 // import MarketPlaceSection from "./components/MarketPlaceSection/MarketPlaceSection";
-// import MythologySection from "./components/MythologySection/MythologySection";
-// import TokonomicSection from "./components/TokonomicSection/TokonomicSection";
+import MythologySection from "./components/MythologySection/MythologySection";
+import TokonomicSection from "./components/TokonomicSection/TokonomicSection";
 // import JoinSection from "./components/JoinSection/JoinSection";
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
               <TrailerSection />
               <SeenOnSection />
               <GamePlaySection />
-              {/* <MarketPlaceSection />
+              {/* <MarketPlaceSection /> */}
               <MythologySection />
               <TokonomicSection />
-              <JoinSection /> */}
+              {/* <JoinSection /> */}
+              <RoadMapSection />
             </div>
           </div>
         </div>
