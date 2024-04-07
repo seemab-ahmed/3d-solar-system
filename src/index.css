@@ -7,6 +7,7 @@ body{
 }
 .space{
     background-image: url("./images/homebg.jpg") !important;
+    height: 700px !important;
     /* background-image: url("./images/bg.jpg") !important; */
 }
 
@@ -19474,6 +19475,19 @@ w3m-modal {
     -o-object-fit: contain !important;
     object-fit: contain !important;
 }
+.gatsby-image-wrappers img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+}
 
 .planetsSection {
     align-items: center;
@@ -19485,6 +19499,7 @@ w3m-modal {
     position: absolute;
     width:100%;
     z-index: 0;
+    top:50px;
 }
 
 @media (max-width: 767px) {
@@ -36394,7 +36409,7 @@ textarea:focus {
 
 .RoadmapSection .right_step .step_date,
 .RoadmapSection .right_step .step_title {
-    margin-left: 11.563vw;
+    margin-left: 5.563vw;
 }
 
 .RoadmapSection .step3 {

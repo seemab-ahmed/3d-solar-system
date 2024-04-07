@@ -5,7 +5,7 @@ import section1BgImage from "../../static/section1_background-4a1e1d72ccc245a188
 import section2BgImage from "../../static/section2_background-6bce75db25ebaf3b37619bc217bb4651.png";
 import section1Image from "../../static/section1-6203073058934433c02affc0fa6c49a8.png";
 import section2Image from "../../static/section2-18e98331edef4ecdda28d47532466c1d.png";
-import mythologyBackground from "../../static/2f34e16e48ed4c9b8b2a0b5cab2df5c1/e8e49/mythology_background.webp";
+import mythologyBackground from "../../static/mythology_background.webp";
 export default function MythologySection() {
   return (
     <div>
@@ -13,21 +13,8 @@ export default function MythologySection() {
         <div className="mythologySection__background">
           <div
             data-gatsby-image-wrapper=""
-            className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            className="gatsby-image-wrapper gatsby-image-wrapper-constrained gatsby-image-wrappers"
           >
-            <div style={{ maxWidth: "981px", display: "block" }}>
-              <img
-                alt=""
-                role="presentation"
-                aria-hidden="true"
-                src="data:image/svg+xml;charset=utf-8,%3Csvg height='491' width='981' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                style={{
-                  maxWidth: "100%",
-                  display: "block",
-                  position: "static",
-                }}
-              />
-            </div>
             <div
               aria-hidden="true"
               data-placeholder-image=""

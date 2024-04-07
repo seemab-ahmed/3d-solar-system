@@ -1,34 +1,34 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from 'react'
+// import React, {useState} from 'react'
 
 export default function PlanetSection() {
-    const [zoomLevel, setZoomLevel] = useState(1);
-    const handleWheel = (event) => {
-        event.preventDefault();
-        const newZoomLevel = Math.min(
-        10,
-        Math.max(0.1, zoomLevel + event.deltaY * -0.005)
-        );
-        const cursorX = event.clientX;
-        const cursorY = event.clientY;
-        const rect = document.documentElement.getBoundingClientRect();
-        const relativeX = cursorX - rect.left;
-        const relativeY = cursorY - rect.top;
-        const scaleFactor = newZoomLevel / zoomLevel;
-        const newScrollX = window.pageXOffset + relativeX * (scaleFactor - 1);
-        const newScrollY = window.pageYOffset + relativeY * (scaleFactor - 1);
-        window.scrollTo(newScrollX, newScrollY);
-        if (newZoomLevel > 1) {
-        setZoomLevel(newZoomLevel);
-        }
-    };
+    // const [zoomLevel, setZoomLevel] = useState(1);
+    // const handleWheel = (event) => {
+    //     event.preventDefault();
+    //     const newZoomLevel = Math.min(
+    //     10,
+    //     Math.max(0.1, zoomLevel + event.deltaY * -0.005)
+    //     );
+    //     const cursorX = event.clientX;
+    //     const cursorY = event.clientY;
+    //     const rect = document.documentElement.getBoundingClientRect();
+    //     const relativeX = cursorX - rect.left;
+    //     const relativeY = cursorY - rect.top;
+    //     const scaleFactor = newZoomLevel / zoomLevel;
+    //     const newScrollX = window.pageXOffset + relativeX * (scaleFactor - 1);
+    //     const newScrollY = window.pageYOffset + relativeY * (scaleFactor - 1);
+    //     window.scrollTo(newScrollX, newScrollY);
+    //     if (newZoomLevel > 1) {
+    //     setZoomLevel(newZoomLevel);
+    //     }
+    // };
   return (
         <div
                 className="space"
-                onWheel={handleWheel}
+                // onWheel={handleWheel}
                 style={{
-                  transform: `scale(${zoomLevel})`,
+                  // transform: `scale(${zoomLevel})`,
                   transition: "transform 0.1s ease-in-out",
                   overflow: "hidden", // Smooth transition
                   position: "relative"

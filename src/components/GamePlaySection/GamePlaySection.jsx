@@ -13,7 +13,7 @@ export default function GamePlaySection() {
     <div>
       <div className="gamePlaySection">
         <div className="gamePlaySection__background">
-          <div className="gatsby-image-wrapper gatsby-image-wrapper-constrained">
+          <div className="gatsby-image-wrapper gatsby-image-wrapper-constrained gatsby-image-wrappers">
             <div style={{ maxWidth: "1920px", display: "block" }}>
               <img
                 alt=""

@@ -9,6 +9,7 @@ import RoadMapSection from "./components/RoadMapSection/RoadMapSection";
 import MythologySection from "./components/MythologySection/MythologySection";
 import TokonomicSection from "./components/TokonomicSection/TokonomicSection";
 // import JoinSection from "./components/JoinSection/JoinSection";
+import Team from "./components/Team/Team";
 function App() {
   return (
     <div id="___gatsby">
@@ -27,6 +28,7 @@ function App() {
               <TokonomicSection />
               {/* <JoinSection /> */}
               <RoadMapSection />
+              <Team />
             </div>
           </div>
         </div>
