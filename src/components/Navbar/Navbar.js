@@ -151,9 +151,7 @@ export default function Navbar() {
               <a href="#">MetaVerse</a>
               <ul className="subMenu">
                 <li className="gameplay">
-                  <a href="https://exoworlds.gitbook.io/exoworlds-whitepaper/game/game-overview">
-                    Gameplay
-                  </a>
+                  <a href="#">Gameplay</a>
                 </li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -217,9 +215,7 @@ export default function Navbar() {
                   </g>
                 </svg>
                 <li className="mythology">
-                  <a href="https://exoworlds.gitbook.io/exoworlds-whitepaper/game/mythology">
-                    Mythology
-                  </a>
+                  <a href="#">Mythology</a>
                 </li>
               </ul>
             </li>
@@ -409,7 +405,7 @@ export default function Navbar() {
             </li>
             <li className="header_icons">
               <a
-                href="https://exoworlds.gitbook.io/exoworlds-whitepaper/"
+                href="#"
                 className="whitepaper"
                 target="_blank"
                 rel="noreferrer"

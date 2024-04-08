@@ -1,54 +1,68 @@
-import React from 'react'
+import React, { useState , useEffect} from 'react';
 import mainLogo2 from "../../static/8ca5247b6d4d3f4e6ffc52e3629ba81f/9e992/main_logo-2.png";
 import closeBetaImage from "../../static/92dbe28061041b3ff9a1c60c6e81117e/9a090/closedbeta-left.png";
 import closedBetaRight from "../../static/ad25e275d6b88c468192d821030ba131/9fadd/closedbeta-right.jpg";
 export default function JoinSection() {
+
+  const [hoursTens, setHoursTens] = useState(0);
+  const [hoursOnes, setHoursOnes] = useState(0);
+  const [minutesTens, setMinutesTens] = useState(0);
+  const [minutesOnes, setMinutesOnes] = useState(0);
+  const [secondsTens, setSecondsTens] = useState(0);
+  const [secondsOnes, setSecondsOnes] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Update the counter every second
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      setHoursTens(Math.floor(hours / 10));
+      setHoursOnes(hours % 10);
+      setMinutesTens(Math.floor(minutes / 10));
+      setMinutesOnes(minutes % 10);
+      setSecondsTens(Math.floor(seconds / 10));
+      setSecondsOnes(seconds % 10);
+    }, 1000);
+
+    // Clean up the interval
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
         <div className="signup-section mt-12">
-          <div className="flex px-6 py-2 w-[100%] -ml-4 md:w-auto md:pl-18 md:pr-20 flex-wrap bg-gradient-to-r from-[#111213] to-[#0b4281] rounded-tr-full gap-4 justify-start items-center border border-[#B3B3B3] border-b-0 skew-x-[15deg] md:skew-x-[45deg] md:-ml-8">
-            <div className="flex relative justify-start items-center gap-2 md:gap-4 w-full skew-x-[-15deg] md:skew-x-[-45deg] flex-row">
+          <div className="flex py-2 w-[100%]  md:w-auto  flex-wrap bg-gradient-to-r from-[#111213] to-[#0b4281] rounded-tr-full gap-4 justify-start items-center border border-[#B3B3B3] border-b-0 ">
+            <div className="flex relative justify-start items-center gap-2 md:gap-4 w-full flex-row pl-8 skew-x-[-15deg]">
               <div
                 data-gatsby-image-wrapper=""
-                className="gatsby-image-wrapper gatsby-image-wrapper-constrained w-32 md:w-80"
+                className="gatsby-image-wrapper gatsby-image-wrapper-constrained w-full flex gap-4"
               >
-                <div style={{ maxWidth: "5654px", display: "block" }}>
-                  <img
-                    alt=""
-                    role="presentation"
-                    aria-hidden="true"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='637' width='5654' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style={{
-                      maxWidth: "100%",
-                      display: "block",
-                      position: "static",
-                    }}
-                  />
                   <div
                     aria-hidden="true"
                     data-placeholder-image=""
                     style={{
                       opacity: 1,
                       transition: "opacity 0.5s linear",
-                      backgroundColor: "#ffffff00",
                       position: "absolute",
                       top: 0,
                       left: 0,
                       bottom: 0,
                       right: 0,
+                      
                     }}
                   ></div>
                   <img
                     data-gatsby-image-ssr=""
                     data-main-image=""
-                    style={{ opacity: 1 }}
+                    style={{ opacity: 1 , width: "300px"}}
                     sizes="(min-width: 5654px) 5654px, 100vw"
                     decoding="async"
                     loading="lazy"
                     src={mainLogo2}
                     alt=""
                   />
-                </div>
 
                 <div className="text-xs md:text-3xl text-center drop-shadow-hover-white px-0">
                   CLOSED BETA
@@ -60,21 +74,8 @@ export default function JoinSection() {
               <div className="leftSection relative w-[200%] h-full md:w-[66%] md:h-[60vh] overflow-hidden border-b border-b-[#9b9b9b] md:border-b-none md:border-r md:border-r-[#9b9b9b] flex justify-center items-center">
                 <div
                   data-gatsby-image-wrapper=""
-                  className="gatsby-image-wrapper gatsby-image-wrapper-constrained h-full -ml-[50%]"
+                  className="gatsby-image-wrapper gatsby-image-wrapper-constrained h-full -ml-[50%] gatsby-image-wrappers"
                 >
-                  <div style={{ maxWidth: "8064px", display: "block" }}>
-                    <img
-                      alt=""
-                      role="presentation"
-                      aria-hidden="true"
-                      src="data:image/svg+xml;charset=utf-8,%3Csvg height='2304' width='8064' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                      style={{
-                        maxWidth: "100%",
-                        display: "block",
-                        position: "static",
-                      }}
-                    />
-                  </div>
                   <div
                     aria-hidden="true"
                     data-placeholder-image=""
@@ -159,43 +160,34 @@ export default function JoinSection() {
                         <div className="desc2 text-lg md:text-2xl drop-shadow-hover-white">
                           JOIN THE WHITELIST TODAY
                         </div>
-                        <div className="counter-app-container rounded-lg bg-transparent flex items-center justify-end w-full gap-2">
-                          <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              1
-                            </div>
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              2
-                            </div>
-                          </div>
-                          <span className="text-lg">:</span>
-                          <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              1
-                            </div>
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              5
-                            </div>
-                          </div>
-                          <span className="text-lg">:</span>
-                          <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              1
-                            </div>
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              3
-                            </div>
-                          </div>
-                          <span className="text-lg">:</span>
-                          <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              4
-                            </div>
-                            <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
-                              2
-                            </div>
-                          </div>
-                        </div>
+                        <div className="counter-app-container rounded-lg bg-transparent flex items-center justify-center w-full gap-2">
+      <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
+        <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
+          {hoursTens}
+        </div>
+        <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
+          {hoursOnes}
+        </div>
+      </div>
+      <span className="text-lg">:</span>
+      <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
+        <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
+          {minutesTens}
+        </div>
+        <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
+          {minutesOnes}
+        </div>
+      </div>
+      <span className="text-lg">:</span>
+      <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg flex justify-between">
+        <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
+          {secondsTens}
+        </div>
+        <div className="bg-gradient-to-br from-[#2e2e2ec5] to-[#a7a7a773] rounded-lg text-lg md:text-2xl flex items-center justify-center w-6 h-9 md:w-8 md:h-12">
+          {secondsOnes}
+        </div>
+      </div>
+    </div>
                         <div className="desc2 text-sm -mt-2 drop-shadow-hover-white">
                           LIMITED TIME OFFER
                         </div>

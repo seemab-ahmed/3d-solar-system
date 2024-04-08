@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import section3Image from "../../static/section3-f776766ed1b096e14265b5f069866f1d.png";
 import section3BgImage from "../../static/section3_background-c37d279287fe4e7deab2bce5b97ef3f5.png";
@@ -95,7 +96,7 @@ export default function MythologySection() {
           </div>
         </div>
         <a
-          href="https://exoworlds.gitbook.io/exoworlds-whitepaper/game/mythology"
+          href="#"
           className="button__accent button__more"
         >
           <span>Learn more</span>

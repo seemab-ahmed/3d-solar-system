@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import galacticImage from "../../static/1-0d9db7233511ecfa762521f3b68086aa.png";
 import mmorpgImage from "../../static/3-9dba6f6882de2630697cb1ae3b90263d.png";
@@ -263,7 +264,7 @@ export default function GamePlaySection() {
           </div>
         </div>
         <a
-          href="https://exoworlds.gitbook.io/exoworlds-whitepaper/game/game-overview"
+          href="#"
           className="button__accent button__more more_bottom"
         >
           <span>Learn more</span>

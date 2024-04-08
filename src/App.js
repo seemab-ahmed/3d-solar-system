@@ -8,7 +8,7 @@ import RoadMapSection from "./components/RoadMapSection/RoadMapSection";
 // import MarketPlaceSection from "./components/MarketPlaceSection/MarketPlaceSection";
 import MythologySection from "./components/MythologySection/MythologySection";
 import TokonomicSection from "./components/TokonomicSection/TokonomicSection";
-// import JoinSection from "./components/JoinSection/JoinSection";
+import JoinSection from "./components/JoinSection/JoinSection";
 import Team from "./components/Team/Team";
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
               {/* <MarketPlaceSection /> */}
               <MythologySection />
               <TokonomicSection />
-              {/* <JoinSection /> */}
+              <JoinSection />
               <RoadMapSection />
               <Team />
             </div>

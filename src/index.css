@@ -41641,10 +41641,10 @@ button.swiper-pagination-bullet {
     object-fit: cover !important;
 }
 
-.home-closedbeta .leftSection img {
+/* .home-closedbeta .leftSection img {
     -o-object-position: left;
     object-position: left;
-}
+} */
 
 .home-closedbeta .rightSection img {
     -o-object-position: 75%;
