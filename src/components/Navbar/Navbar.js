@@ -587,7 +587,7 @@ export default function Navbar() {
                   }}
                 ></div>
                 <img
-                  width={toggle ? "105px" : "85px"}
+                  width={toggle ? "100px" : "80px"}
                   data-main-image=""
                   style={{ objectFit: "cover", opacity: "1" }}
                   sizes="(min-width: 726px) 726px, 100vw"
