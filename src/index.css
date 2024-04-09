@@ -5,6 +5,10 @@
 body{
     background-image: url("./images/homebg.jpg") !important;
 }
+
+
+
+
 .space{
     background-image: url("./images/homebg.jpg") !important;
     height: 700px !important;
@@ -35302,9 +35306,13 @@ textarea:focus {
     left: -5.313vw;
 }
 
-.teamSection .slick-center .teamItem {
+/* .teamSection .slick-current .teamItem {
     transform: scale(1.2);
+} */
+.teamSection .slick-center .teamItem {
+    transform: scale(1.2) !important;
 }
+
 
 .teamSection .teamItem {
     margin-bottom: 7.292vw;
