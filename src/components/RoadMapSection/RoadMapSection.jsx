@@ -1,7 +1,33 @@
-import React from "react";
+import React , {useEffect, useRef} from "react";
 import leftBorder from "../../static/step_left_border.webp";
 import rightBorder from "../../static/step_border_bottom.webp";
 export default function RoadMapSection() {
+
+    const sectionRefs = useRef([]);
+  
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Change the threshold as needed
+    };
+
+    const handleIntersect = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInFromBottomRoadmap 3s ease forwards';
+        } else {
+          entry.target.style.animation = 'fadeOutToBottomRoadmap .2s ease forwards';
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+
+    sectionRefs.current.forEach(ref => {
+      observer.observe(ref);
+    });
+  });
   return (
     <div>
       <div className="RoadmapSection">
@@ -11,7 +37,7 @@ export default function RoadMapSection() {
         </div>
         <div className="container">
           <div className="steps">
-            <div className="step step1 right_step">
+            <div className="step step1 right_step" ref={el => sectionRefs.current[0] = el}>
               <div className="stepNumberMobile">
                 <span>1</span>
               </div>
@@ -51,7 +77,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step2 left_step">
+            <div className="step step2 left_step" ref={el => sectionRefs.current[1] = el}>
               <div className="stepNumberMobile">
                 <span>2</span>
               </div>
@@ -90,7 +116,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step3 right_step">
+            <div className="step step3 right_step" ref={el => sectionRefs.current[2] = el}>
               <div className="stepNumberMobile">
                 <span>3</span>
               </div>
@@ -129,7 +155,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step4 left_step">
+            <div className="step step4 left_step" ref={el => sectionRefs.current[3] = el}>
               <div className="stepNumberMobile">
                 <span>4</span>
               </div>
@@ -168,7 +194,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step5 right_step">
+            <div className="step step5 right_step" ref={el => sectionRefs.current[4] = el}>
               <div className="stepNumberMobile">
                 <span>5</span>
               </div>
@@ -208,7 +234,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step6 left_step">
+            <div className="step step6 left_step" ref={el => sectionRefs.current[5] = el}>
               <div className="stepNumberMobile">
                 <span>6</span>
               </div>
@@ -248,7 +274,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step7 right_step">
+            <div className="step step7 right_step" ref={el => sectionRefs.current[6] = el}>
               <div className="stepNumberMobile">
                 <span>7</span>
               </div>
@@ -290,7 +316,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step8 left_step">
+            <div className="step step8 left_step" ref={el => sectionRefs.current[7] = el}>
               <div className="stepNumberMobile">
                 <span>8</span>
               </div>
@@ -332,7 +358,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step9 right_step">
+            <div className="step step9 right_step" ref={el => sectionRefs.current[8] = el}>
               <div className="stepNumberMobile">
                 <span>9</span>
               </div>
@@ -374,7 +400,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step10 left_step">
+            <div className="step step10 left_step" ref={el => sectionRefs.current[9] = el}>
               <div className="stepNumberMobile">
                 <span>10</span>
               </div>
@@ -414,7 +440,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step11 right_step">
+            <div className="step step11 right_step" ref={el => sectionRefs.current[10] = el}>
               <div className="stepNumberMobile">
                 <span>11</span>
               </div>
@@ -454,7 +480,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step12 left_step">
+            <div className="step step12 left_step" ref={el => sectionRefs.current[11] = el}>
               <div className="stepNumberMobile">
                 <span>12</span>
               </div>
@@ -494,7 +520,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step13 right_step">
+            <div className="step step13 right_step" ref={el => sectionRefs.current[12] = el}>
               <div className="stepNumberMobile">
                 <span>13</span>
               </div>
@@ -534,7 +560,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step14 left_step">
+            <div className="step step14 left_step" ref={el => sectionRefs.current[13] = el}>
               <div className="stepNumberMobile">
                 <span>14</span>
               </div>
@@ -574,7 +600,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step15 right_step">
+            <div className="step step15 right_step" ref={el => sectionRefs.current[14] = el}>
               <div className="stepNumberMobile">
                 <span>15</span>
               </div>
@@ -614,7 +640,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step16 left_step">
+            <div className="step step16 left_step" ref={el => sectionRefs.current[15] = el}>
               <div className="stepNumberMobile">
                 <span>16</span>
               </div>
@@ -656,7 +682,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step17 right_step">
+            <div className="step step17 right_step" ref={el => sectionRefs.current[16] = el}>
               <div className="stepNumberMobile">
                 <span>17</span>
               </div>
@@ -696,7 +722,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step18 left_step">
+            <div className="step step18 left_step" ref={el => sectionRefs.current[17] = el}>
               <div className="stepNumberMobile">
                 <span>18</span>
               </div>
@@ -736,7 +762,7 @@ export default function RoadMapSection() {
                 </div>
               </div>
             </div>
-            <div className="step step19 right_step">
+            <div className="step step19 right_step" ref={el => sectionRefs.current[18] = el}>
               <div className="stepNumberMobile">
                 <span>19</span>
               </div>

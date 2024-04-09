@@ -36696,6 +36696,62 @@ textarea:focus {
     transform: scale(0);
 }
 
+@keyframes fadeInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(50px); /* Adjust the value for desired distance */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutToBottom {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(50px); /* Adjust the value for desired distance */
+    }
+  }
+
+  @keyframes fadeInFromBottomRoadmap {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Adjust the value for desired distance */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutToBottomRoadmap {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px); /* Adjust the value for desired distance */
+    }
+  }
+  
+.mythologySection .mythology_list_item {
+    opacity: 0;
+  }
+  .gamePlayInner{
+    opacity: 0;
+  }
+  .gamePlayInner2{
+    opacity: 0;
+  } 
+  .steps .step {
+    opacity: 0;
+  }
 .mythologySection .mythology_list_item {
     background-position: bottom;
     background-repeat: no-repeat;

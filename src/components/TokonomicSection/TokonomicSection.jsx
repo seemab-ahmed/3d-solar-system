@@ -1,6 +1,23 @@
-import React from "react";
+import React , { useEffect } from "react";
 import coinImage from "../../static/coin.webp";
 export default function TokonomicSection() {
+  
+  useEffect(() => {
+    function handleScroll() {
+      const rotatingImage = document.getElementById("rotatingImage");
+      const rotationAngle = window.scrollY / 2; // Adjust the division factor for desired rotation speed
+      
+      rotatingImage.style.transform = `rotate(${rotationAngle}deg)`;
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); 
+
   return (
       <div>
         <div className="tokenomicsSection">
@@ -65,6 +82,7 @@ export default function TokonomicSection() {
               ></div>
 
               <img
+              id="rotatingImage"
                 data-gatsby-image-ssr=""
                 data-main-image=""
                 style={{ opacity: 1 }}

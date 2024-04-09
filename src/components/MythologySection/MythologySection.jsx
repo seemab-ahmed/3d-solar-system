@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React , {useEffect , useRef} from "react";
 import section3Image from "../../static/section3-f776766ed1b096e14265b5f069866f1d.png";
 import section3BgImage from "../../static/section3_background-c37d279287fe4e7deab2bce5b97ef3f5.png";
 import section1BgImage from "../../static/section1_background-4a1e1d72ccc245a188c8e73f09e4450b.png";
@@ -8,6 +8,32 @@ import section1Image from "../../static/section1-6203073058934433c02affc0fa6c49a
 import section2Image from "../../static/section2-18e98331edef4ecdda28d47532466c1d.png";
 import mythologyBackground from "../../static/mythology_background.webp";
 export default function MythologySection() {
+
+  const sectionRefs = useRef([]);
+  
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Change the threshold as needed
+    };
+
+    const handleIntersect = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInFromBottom 4s ease forwards';
+        } else {
+          entry.target.style.animation = 'fadeOutToBottom .2s ease forwards';
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+
+    sectionRefs.current.forEach(ref => {
+      observer.observe(ref);
+    });
+  });
   return (
     <div>
       <div className="mythologySection">
@@ -55,7 +81,7 @@ export default function MythologySection() {
             all the life within.
           </div>
           <div className="mythology_list">
-            <div className="mythology_list_item item_1">
+            <div className="mythology_list_item item_1" ref={el => sectionRefs.current[0] = el}>
               <div className="itemBgContainer">
                 <img alt="item" className="itemBg" src={section1BgImage} />
               </div>
@@ -67,7 +93,7 @@ export default function MythologySection() {
                 </div>
               </div>
             </div>
-            <div className="mythology_list_item item_2">
+            <div className="mythology_list_item item_2" ref={el => sectionRefs.current[1] = el}>
               <div className="itemBgContainer">
                 <img alt="item" className="itemBg" src={section2BgImage} />
               </div>
@@ -80,7 +106,7 @@ export default function MythologySection() {
                 </div>
               </div>
             </div>
-            <div className="mythology_list_item item_3">
+            <div className="mythology_list_item item_3" ref={el => sectionRefs.current[2] = el}>
               <div className="itemBgContainer">
                 <img alt="item" className="itemBg" src={section3BgImage} />
               </div>

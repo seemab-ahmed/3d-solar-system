@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React , {useEffect, useRef} from "react";
 import galacticImage from "../../static/1-0d9db7233511ecfa762521f3b68086aa.png";
 import mmorpgImage from "../../static/3-9dba6f6882de2630697cb1ae3b90263d.png";
 import civilizationImage from "../../static/4-290440b1c11d2c895bbd475b38758f7f.png";
@@ -10,6 +10,32 @@ import pvpImage from "../../static/9-54c390bfaa3ee99229231ff729142127.png";
 import p2pImage from "../../static/10-52842de5ed06a158228700a26bd1f01e.png";
 import gamePlayBackground from "../../static/604c1b302f2d78f6236da604060f1fc3/26222/gameplay_background.webp"
 export default function GamePlaySection() {
+
+  const sectionRefs = useRef([]);
+  
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Change the threshold as needed
+    };
+
+    const handleIntersect = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInFromBottom 4s ease forwards';
+        } else {
+          entry.target.style.animation = 'fadeOutToBottom .2s ease forwards';
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+
+    sectionRefs.current.forEach(ref => {
+      observer.observe(ref);
+    });
+  });
   return (
     <div>
       <div className="gamePlaySection">
@@ -61,7 +87,7 @@ export default function GamePlaySection() {
         </div>
         <div className="gamePlayColumn">
           <div className="featuresList">
-            <div className="gamePlayInner">
+            <div className="gamePlayInner" ref={el => sectionRefs.current[0] = el}>
               <div className="hideBorrder"></div>
               <div className="hideBorrder2"></div>
               <div className="innerImage">
@@ -78,7 +104,7 @@ export default function GamePlaySection() {
                 way you want. The Metaverse is at your fingertips
               </div>
             </div>
-            <div className="gamePlayInner">
+            <div className="gamePlayInner" ref={el => sectionRefs.current[1] = el}>
               <div className="hideBorrder"></div>
               <div className="hideBorrder2"></div>
               <div className="innerImage">
@@ -96,7 +122,7 @@ export default function GamePlaySection() {
                 yourself up with the coolest spaceships and weapons.
               </div>
             </div>
-            <div className="gamePlayInner">
+            <div className="gamePlayInner" ref={el => sectionRefs.current[2] = el}>
               <div className="hideBorrder"></div>
               <div className="hideBorrder2"></div>
               <div className="innerImage">
@@ -114,7 +140,7 @@ export default function GamePlaySection() {
                 businessman, pirate or builder in the galaxy.
               </div>
             </div>
-            <div className="gamePlayInner">
+            <div className="gamePlayInner" ref={el => sectionRefs.current[3] = el}>
               <div className="hideBorrder"></div>
               <div className="hideBorrder2"></div>
               <div className="innerImage">
@@ -132,7 +158,7 @@ export default function GamePlaySection() {
                 possibilities to explore and dangers to overcome.
               </div>
             </div>
-            <div className="gamePlayInner">
+            <div className="gamePlayInner" ref={el => sectionRefs.current[4] = el}>
               <div className="hideBorrder"></div>
               <div className="hideBorrder2"></div>
               <div className="innerImage">
@@ -149,7 +175,7 @@ export default function GamePlaySection() {
                 these have unique features, NPC’s and planet life.
               </div>
             </div>
-            <div className="gamePlayInner">
+            <div className="gamePlayInner" ref={el => sectionRefs.current[5] = el}>
               <div className="hideBorrder"></div>
               <div className="hideBorrder2"></div>
               <div className="innerImage">
@@ -171,7 +197,7 @@ export default function GamePlaySection() {
         </div>
 
         <div className="gamePlayColumn2">
-          <div className="gamePlayInner2 firstElement">
+          <div className="gamePlayInner2 firstElement" ref={el => sectionRefs.current[6] = el}>
             <div className="hideBorrder"></div>
             <div className="hideBorrder2"></div>
             <div className="inner_container">
@@ -193,7 +219,7 @@ export default function GamePlaySection() {
               </div>
             </div>
           </div>
-          <div className="gamePlayInner2">
+          <div className="gamePlayInner2" ref={el => sectionRefs.current[7] = el}>
             <div className="hideBorrder"></div>
             <div className="hideBorrder2"></div>
             <div className="inner_container">
@@ -216,7 +242,7 @@ export default function GamePlaySection() {
               </div>
             </div>
           </div>
-          <div className="gamePlayInner2">
+          <div className="gamePlayInner2" ref={el => sectionRefs.current[8] = el}>
             <div className="hideBorrder"></div>
             <div className="hideBorrder2"></div>
             <div className="inner_container">
@@ -239,7 +265,7 @@ export default function GamePlaySection() {
               </div>
             </div>
           </div>
-          <div className="gamePlayInner2">
+          <div className="gamePlayInner2" ref={el => sectionRefs.current[9] = el}>
             <div className="hideBorrder"></div>
             <div className="hideBorrder2"></div>
             <div className="inner_container">
